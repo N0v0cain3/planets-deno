@@ -14,7 +14,17 @@ async function loadPlanetsData() {
 
   Deno.close(file.rid);
 
-  console.log(result);
+  const planets = result.filter((p: any) => {
+    const planataryRadius = p["koi_prad"];
+    const stellarMass = p["koi_smass"];
+    const stellarRadius = p["koi_srad"];
+    return p["koi_disposition"] === "CONFIRMED" && planataryRadius > 0.5 &&
+      planataryRadius < 1.5 && stellarMass > 0.78 && stellarMass < 1.04 &&
+      stellarRadius > 0.99 && stellarRadius < 1.01;
+  });
+
+  return result;
 }
 
-await loadPlanetsData();
+const newEarths = await loadPlanetsData();
+console.log(`${newEarths.length} habitable planets found`);
