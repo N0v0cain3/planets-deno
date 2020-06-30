@@ -28,7 +28,7 @@
 ```
 $ git clone https://github.com/N0v0cain3/<Project>
 $ cd <Project>
-$ deno run server.ts
+$ deno run mod.ts
   or
 $ denon start
 ```
