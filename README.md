@@ -4,8 +4,8 @@
 
 # Deno Planets
 
-> <Subtitle>
-> Include project description here.
+> Finding out habitable planets
+> Extracting the data provided from NASA and applying criteras provided by the NASA and other organisations to detect habitable planets.
 
 ---
 [![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
